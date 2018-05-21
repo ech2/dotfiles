@@ -11,9 +11,9 @@ Xft.lcdfilter: lcddefault
 ! Colors {{
 !#define DARK
 #ifdef DARK
-  #include "/home/ech/workspace/dotfiles/theme/base16-grayscale-dark-256.Xresources"
+  #include "/home/ech/.config/ech/base16-grayscale-dark-256.Xresources"
 #else
-  #include "/home/ech/workspace/dotfiles/theme/base16-grayscale-light-256.Xresources"
+  #include "/home/ech/.config/ech/base16-grayscale-light-256.Xresources"
 #endif
 base0: base00
 base1: base01
