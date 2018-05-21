@@ -128,8 +128,8 @@
     bindsym $mod+F3 exec notify-send "`xclip -o | trans -b :en`"
     bindsym $mod+F4 exec notify-send "`xclip -o | trans -b :ru`"
 
-    bindsym $mod+F9 exec /home/ech/workspace/dotfiles/screen_red.sh 3100
-    bindsym $mod+Mod1+F9 exec /home/ech/workspace/dotfiles/screen_red.sh 1000
+    bindsym $mod+F9 exec ~/.local/ech/screen_red.sh 3100
+    bindsym $mod+Mod1+F9 exec ~/.local/ech/screen_red.sh 1000
   # }}
   # Modes {{
     bindsym $mod+F10 mode "$mode_border"
@@ -139,10 +139,10 @@
   # }}
 # }}
 # Autostart {{
-  exec_always --no-startup-id bash ~/workspace/dotfiles/per_computer.sh
+  exec_always --no-startup-id bash ~/.local/ech/per_computer.sh
   exec --no-startup-id crontab ~/workspace/dotfiles/tick.cron
   exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-  exec_always sleep 0.1 && feh --bg-fill ~/workspace/dotfiles/theme/1510258455722.jpg
+  exec_always sleep 0.1 && feh --bg-fill ~/.local/ech/dark.jpg
   exec --no-startup-id nm-applet
   exec --no-startup-id xfce4-power-manager
   exec --no-startup-id dunst
