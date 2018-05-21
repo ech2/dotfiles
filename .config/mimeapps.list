@@ -1,29 +1,14 @@
 [Default Applications]
 application/pdf=qpdfview.desktop
-x-scheme-handler/http=qutebrowser.desktop
-x-scheme-handler/https=qutebrowser.desktop
-x-scheme-handler/ftp=qutebrowser.desktop
-x-scheme-handler/chrome=qutebrowser.desktop
-text/html=qutebrowser.desktop
-application/x-extension-htm=qutebrowser.desktop
-application/x-extension-html=qutebrowser.desktop
-application/x-extension-shtml=qutebrowser.desktop
-application/xhtml+xml=qutebrowser.desktop
-application/x-extension-xhtml=qutebrowser.desktop
-application/x-extension-xht=qutebrowser.desktop
 inode/directory=ranger.desktop;org.gnome.Nautilus.desktop;
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/ftp=chromium.desktop
+x-scheme-handler/chrome=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
 
 [Added Associations]
 application/pdf=qpdfview.desktop
-x-scheme-handler/http=qutebrowser.desktop
-x-scheme-handler/https=qutebrowser.desktop
-x-scheme-handler/ftp=qutebrowser.desktop
-x-scheme-handler/chrome=qutebrowser.desktop
-text/html=qutebrowser.desktop
-application/x-extension-htm=qutebrowser.desktop
-application/x-extension-html=qutebrowser.desktop
-application/x-extension-shtml=qutebrowser.desktop
-application/xhtml+xml=qutebrowser.desktop
-application/x-extension-xhtml=qutebrowser.desktop
-application/x-extension-xht=qutebrowser.desktop
 inode/directory=ranger.desktop;org.gnome.Nautilus.desktop;
