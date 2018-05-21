@@ -80,8 +80,10 @@ ex () {
     echo "'$1' is not a valid file"
   fi
 }
-sync.darwin() {
-  rsync -az --progress --exclude-from=~/workspace/.rsync-exclude ~/workspace ech@darwin:~/workspace
+sync.thesis () {
+    curl --user "nid=mm.st:`pass fm/dav`" --basic -T \
+         "$HOME/workspace/phd/in-work/thesis/thesis.html" \
+         "https://myfiles.fastmail.com/trunk.oscii.ru/thesis/index.html"
 }
 # }
 # Aliases {
