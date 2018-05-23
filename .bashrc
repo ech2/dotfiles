@@ -30,14 +30,14 @@ mcd() {
 goto() {
   if [ $# -eq 0 ]; then echo 'No parameters'; return; fi
   case $1 in
-    'w') cd ~/workspace ;;
+    'h')   cd ~ ;;
+    'w')   cd ~/workspace ;;
+    'd')   cd ~/workspace/dev ;;
+    'n')   cd ~/workspace/notes ;;
     'phd') cd ~/workspace/phd/in-work ;;
-    'd') cd ~/workspace/dev ;;
-    'df') cd ~/workspace/dotfiles ;;
-    'p') cd ~/workspace/projects/in-work ;;
-    't') cd ~/workspace/trunk ;;
-    's') cd ~/workspace/sites ;;
-    'n') cd ~/workspace/notes ;;
+    'p')   cd ~/workspace/projects/in-work ;;
+    't')   cd ~/workspace/trunk ;;
+    's')   cd ~/workspace/sites ;;
     *) echo 'Destination unknown :(' ;;
   esac
 }
