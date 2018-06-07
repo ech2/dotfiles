@@ -12,3 +12,4 @@ x-scheme-handler/unknown=chromium.desktop
 [Added Associations]
 application/pdf=qpdfview.desktop
 inode/directory=ranger.desktop;org.gnome.Nautilus.desktop;
+application/x-ms-dos-executable=wine.desktop;
