@@ -8,8 +8,10 @@ x-scheme-handler/ftp=chromium.desktop
 x-scheme-handler/chrome=chromium.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
+x-scheme-handler/mailto=userapp-Evolution-DX9RKZ.desktop
 
 [Added Associations]
 application/pdf=qpdfview.desktop
 inode/directory=ranger.desktop;org.gnome.Nautilus.desktop;
 application/x-ms-dos-executable=wine.desktop;
+x-scheme-handler/mailto=userapp-Evolution-DX9RKZ.desktop;
