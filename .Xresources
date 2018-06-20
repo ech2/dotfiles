@@ -9,7 +9,7 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 ! }}
 ! Colors {{
-#define DARK
+!#define DARK
 #ifdef DARK
   #include "/home/ech/.config/ech/base16-grayscale-dark-256.Xresources"
 #else

@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 # vim: set foldmarker={{,}} foldlevel=0 foldmethod=marker:
 
 case `hostname` in
@@ -13,10 +13,12 @@ case `hostname` in
   'blank')
     export EDITOR='emacsclient -a "" -t'
     export VISUAL='emacsclient -a ""'
-    setxkbmap -layout rukbi_en,rukbi_ru\
-              -option grp:win_space_toggle\
+    setxkbmap -layout us,ru\
+              -option grp:alt_shift_toggle\
               -option caps:escape\
-              -option altwin:swap_lalt_lwin
+              -option altwin:swap_lalt_lwin\
+              -option lv3:ralt_switch\
+	      -option misc:typo
     xfce4-power-manager &
   ;;
 esac

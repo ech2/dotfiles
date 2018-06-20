@@ -110,7 +110,6 @@ case `what_os` in
     alias c.xres='ecl ~/.Xresources'
     alias c.nvim='ecl ~/.config/nvim/init.vim'
     alias cal.sync='calcurse-caldav --password=$(pass show fm-caldav)'
-    alias vim='nvim'
     ;;
 esac
 

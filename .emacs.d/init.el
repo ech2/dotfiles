@@ -28,7 +28,7 @@
   (progn
     (setq org-latex-pdf-process '("latexmk -pdf -f %f"))
     (setq org-todo-keywords
-          '((sequence "TODO" " "WAITING" "|" "DONE" "CANCELED")))
+          '((sequence "TODO" "WAITING" "|" "DONE" "CANCELED")))
     (setq org-agenda-files '("~/workspace/notes/todo.org"))
     (setq org-ref-bib-html "<h2 class='org-ref-bib-h2'>Bibliography</h2>")
     ))
