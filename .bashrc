@@ -104,12 +104,13 @@ case `what_os` in
     alias grep='grep --colour=auto'
     alias egrep='egrep --colour=auto'
     alias fgrep='fgrep --colour=auto'
-    alias c.bashrc='ecl ~/.bashrc'
-    alias c.compton='ecl ~/.config/compton.conf'
+    alias c.bashrc='vim ~/.bashrc'
+    alias c.compton='vim ~/.config/compton.conf'
     alias c.i3='ecl ~/.config/i3/config'
     alias c.xres='ecl ~/.Xresources'
-    alias c.nvim='ecl ~/.config/nvim/init.vim'
-    alias cal.sync='calcurse-caldav --password=$(pass show fm-caldav)'
+    alias c.info='ecl ~/workspace/notes/info.org'
+    alias c.todo='ecl ~/workspace/notes/todo.org'
+    alias c.stuff='ecl ~/workspace/notes/stuff.org'
     ;;
 esac
 
@@ -125,18 +126,16 @@ case `what_os` in
     export PATH=/usr/local/bin:/usr/local/sbin:/Users/ech/Library/Haskell/bin:$PATH
     ;;
   'linux')
-    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-    export PATH=$HOME/.gem/ruby/2.4.0/bin:$HOME/.cargo/bin:$PATH
-    export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
-    [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+   [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
     shopt -s checkwinsize
     shopt -s expand_aliases
-    # export QT_SELECT=4
     shopt -s histappend
-    export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
+
+    EDITOR=""
+    EDITOR="emacsclient -t"
+    VISUAL="emacsclient -c -a emacs"
     ;;
 esac
 
 export PATH=$HOME/workspace/bin:$PATH
-export GOPATH=$HOME/workspace/dev/go
 # }

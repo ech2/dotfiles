@@ -15,3 +15,4 @@ application/pdf=qpdfview.desktop
 inode/directory=ranger.desktop;org.gnome.Nautilus.desktop;
 application/x-ms-dos-executable=wine.desktop;
 x-scheme-handler/mailto=userapp-Evolution-DX9RKZ.desktop;
+image/x-eps=qpdfview.desktop;

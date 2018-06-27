@@ -10,33 +10,45 @@ Xft.lcdfilter: lcddefault
 ! }}
 ! Colors {{
 !#define DARK
-#ifdef DARK
-  #include "/home/ech/.config/ech/base16-grayscale-dark-256.Xresources"
-#else
-  #include "/home/ech/.config/ech/base16-grayscale-light-256.Xresources"
-#endif
-base0: base00
-base1: base01
-base2: base02
-base3: base03
-base4: base04
-base5: base05
-base6: base06
-base7: base07
-base8: base08
-base9: base09
-baseA: base10
-baseB: base11
-baseC: base12
-baseD: base13
-baseE: base14
-baseF: base15
+!#ifdef DARK
+!  #include "/home/ech/.config/ech/base16-grayscale-dark-256.Xresources"
+!#else
+!  #include "/home/ech/.config/ech/base16-grayscale-light-256.Xresources"
+!#endif
+
+*.foreground:   #98d1ce
+*.background:   #0a0f14
+*.cursorColor:  #98d1ce
+
+*.color0:       #0a0f14
+*.color8:       #10151b
+
+*.color1:       #c33027
+*.color9:       #d26939
+
+*.color2:       #26a98b
+*.color10:      #081f2d
+
+*.color3:       #edb54b
+*.color11:      #245361
+
+*.color4:       #195465
+*.color12:      #093748
+
+*.color5:       #4e5165
+*.color13:      #888ba5
+
+*.color6:       #33859d
+*.color14:      #599caa
+
+*.color7:       #98d1ce
+*.color15:      #d3ebe9
 !}}
 ! rofi {{
 rofi.lines: 5
 rofi.width: 40
-rofi.color-normal: base00, base05, base01, base02, base05
-rofi.color-window: base00, base02, base02
+!rofi.color-normal: base00, base05, base01, base02, base05
+!rofi.color-window: base00, base02, base02
 ! }}
 ! st {{
 st.font: DejaVuSansMono:pixelsize=14:antialias=true:autohint=true
