@@ -113,9 +113,12 @@
 
     bindsym $mod+Return exec st
     bindsym $mod+Ctrl+m exec pavucontrol
-    bindsym $mod+r exec st -name=floating -g=100x24 -e 'ranger' 
-    bindsym $mod+Shift+c exec st -name=floating -g=100x24 -e 'calcurse'
+    bindsym $mod+r exec st -name=floating -g=100x24 -e 'vifm' 
+
     bindsym $mod+c exec emacsclient -a "" -c "$@"
+    bindsym $mod+t exec emacsclient -a "" -c "~/workspace/notes/todo.org"
+    bindsym $mod+n exec emacsclient -a "" -c "~/workspace/notes/notes.org"
+    bindsym $mod+i exec emacsclient -a "" -c "~/workspace/notes/info.org"
 
     #bindsym $mod+i [instance="ipy_pad"] scratchpad show; move position center
 
@@ -140,15 +143,17 @@
 # }}
 # Autostart {{
   exec_always --no-startup-id bash ~/.config/ech/per_computer.sh
-  exec --no-startup-id crontab ~/workspace/dotfiles/tick.cron
   exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-  exec_always sleep 0.1 && feh --bg-fill ~/.config/ech/dark.jpg
+  #exec_always sleep 0.1 && feh --bg-fill ~/.config/ech/dark.jpg
+
   exec --no-startup-id nm-applet
+  exec --no-startup-id pa-applet
   exec --no-startup-id xfce4-power-manager
   exec --no-startup-id dunst
-  exec --no-startup-id emacs --daemon
 
-  exec --no-startup-id pa-applet
+  exec --no-startup-id emacs --daemon
+  exec --no-startup-id dropbox
+  exec --no-startup-id enpass
 # }}
 # Colors and i3bar {{
   set $base00 #101010
