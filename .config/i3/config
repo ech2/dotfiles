@@ -147,7 +147,7 @@
   #exec_always sleep 0.1 && feh --bg-fill ~/.config/ech/dark.jpg
 
   exec --no-startup-id nm-applet
-  exec --no-startup-id pa-applet
+  exec --no-startup-id pa-applet --disable-notifications
   exec --no-startup-id xfce4-power-manager
   exec --no-startup-id dunst
 
