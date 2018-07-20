@@ -113,7 +113,7 @@
 
     bindsym $mod+Return exec st
     bindsym $mod+Ctrl+m exec pavucontrol
-    bindsym $mod+r exec st -name=floating -g=100x24 -e 'vifm' 
+    bindsym $mod+r exec st -c st -n floating -g 100x24 -e 'ranger' 
 
     bindsym $mod+c exec emacsclient -a "" -c "$@"
     bindsym $mod+t exec emacsclient -a "" -c "~/workspace/notes/todo.org"
@@ -150,6 +150,7 @@
   exec --no-startup-id pa-applet --disable-notifications
   exec --no-startup-id xfce4-power-manager
   exec --no-startup-id dunst
+  exec --no-startup-id sh -c 'if [ `hostname` == "lank" ]; then xgamma -bgamma 0.95 ; fi'
 
   exec --no-startup-id emacs --daemon
   exec --no-startup-id dropbox
