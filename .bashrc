@@ -87,55 +87,39 @@ sync.thesis () {
 }
 # }
 # Aliases {
-case `what_os` in
-  'mac')
-    alias xc='pbcopy'
-    alias xx='pbpaste'
-    alias ls='ls -GFh'
-    alias oo='open .'
-    alias lockscreen='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
-   ;;
-  'linux')
-    alias xc='xclip'
-    alias xx='xclip -o'
-    alias oo='pcmanfm .'
-    alias ecl='emacsclient -a "" -t'
-    alias ls='ls --color=auto -h'
-    alias grep='grep --colour=auto'
-    alias egrep='egrep --colour=auto'
-    alias fgrep='fgrep --colour=auto'
-    alias c.bashrc='vim ~/.bashrc'
-    alias c.compton='vim ~/.config/compton.conf'
-    alias c.i3='ecl ~/.config/i3/config'
-    alias c.xres='ecl ~/.Xresources'
-    alias c.info='ecl ~/workspace/notes/info.org'
-    alias c.todo='ecl ~/workspace/notes/todo.org'
-    alias c.stuff='ecl ~/workspace/notes/stuff.org'
-    ;;
-esac
-
-alias lsr='ls -ltr'
+alias oo='pcmanfm .'
+alias xc='xclip'
+alias xx='xclip -o'
 alias xc.ssh='cat ~/.ssh/id_rsa.pub | xc'
-alias grep='grep --color'
-alias jyp=jupyter-notebook
+
+alias ecl='emacsclient -a "" -t'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+alias ls='ls --color=auto -h'
+alias lsr='ls -ltr'
+
 alias ipy=ipython3
+alias jyp=jupyter-notebook
+
+alias c.bashrc='$EDITOR ~/.bashrc'
+alias c.compton='$EDITOR ~/.config/compton.conf'
+alias c.i3='$EDITOR ~/.config/i3/config'
+alias c.xres='$EDITOR ~/.Xresources'
+alias c.info='$EDITOR ~/workspace/notes/info.org'
+alias c.todo='$EDITOR ~/workspace/notes/todo.org'
+alias c.stuff='$EDITOR ~/workspace/notes/stuff.org'
 # }
 # Environment {
-case `what_os` in
-  'mac')
-    export PATH=/usr/local/bin:/usr/local/sbin:/Users/ech/Library/Haskell/bin:$PATH
-    ;;
-  'linux')
-   [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
-    shopt -s checkwinsize
-    shopt -s expand_aliases
-    shopt -s histappend
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+shopt -s checkwinsize
+shopt -s expand_aliases
+shopt -s histappend
 
-    EDITOR=""
-    EDITOR="emacsclient -t"
-    VISUAL="emacsclient -c -a emacs"
-    ;;
-esac
+#EDITOR="emacsclient -t"
+#VISUAL="emacsclient -c -a emacs"
+EDITOR="vim"
+VISUAL="gvim"
 
 export PATH=$HOME/workspace/bin:$PATH
 # }

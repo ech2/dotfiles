@@ -132,6 +132,7 @@
     bindsym $mod+F4 exec notify-send "`xclip -o | trans -b :ru`"
 
     bindsym $mod+F9 exec ~/.config/ech/screen_red.sh 3100
+    bindsym $mod+Shift+F9 exec wal -i ~/workspace/res/wallpapers
     bindsym $mod+Mod1+F9 exec ~/.config/ech/screen_red.sh 1000
   # }}
   # Modes {{
@@ -142,19 +143,7 @@
   # }}
 # }}
 # Autostart {{
-  exec_always --no-startup-id bash ~/.config/ech/per_computer.sh
-  exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-  #exec_always sleep 0.1 && feh --bg-fill ~/.config/ech/dark.jpg
-
-  exec --no-startup-id nm-applet
-  exec --no-startup-id pa-applet --disable-notifications
-  exec --no-startup-id xfce4-power-manager
-  exec --no-startup-id dunst
-  exec --no-startup-id sh -c 'if [ `hostname` == "lank" ]; then xgamma -bgamma 0.95 ; fi'
-
-  exec --no-startup-id emacs --daemon
-  exec --no-startup-id dropbox
-  exec --no-startup-id enpass
+  exec --no-startup-id bash ~/.config/ech/autostart.sh
 # }}
 # Colors and i3bar {{
   set $base00 #101010
@@ -282,7 +271,7 @@
   }
 # }}
 # i3gaps {{
-  gaps inner 10
+  gaps inner 40
   gaps outer -4
   
   smart_borders on
