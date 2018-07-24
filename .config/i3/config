@@ -167,7 +167,6 @@
     status_command i3status
     font xft:Noto Sans 10.5
     strip_workspace_numbers yes
-    mode hide
     modifier none
   
     colors {
@@ -271,7 +270,7 @@
   }
 # }}
 # i3gaps {{
-  gaps inner 40
+  gaps inner 35
   gaps outer -4
   
   smart_borders on
