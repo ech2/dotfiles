@@ -37,7 +37,6 @@
     bindsym $mod+v exec xdotool click 2
     bindsym $mod+w kill
     bindsym $mod+Shift+f fullscreen toggle
-    bindsym $mod+Shift+Delete exec --no-startup-id i3exit lock
 
     bindsym $mod+Mod1+h resize grow width 10 px or 10 ppt
     bindsym $mod+Mod1+j resize grow height 10 px or 10 ppt
@@ -237,7 +236,7 @@
 # Modes {{
   set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
   mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym l exec --no-startup-id i3lock -c222222, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym h exec --no-startup-id systemctl hibernate, mode "default"
