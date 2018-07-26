@@ -11,7 +11,7 @@
 	l = log --pretty=format:'%Cblue%h %Cgreen%cd%Creset %s %Cgreen%cn' --date=short
 	unstage = reset HEAD --
 [core]
-	editor = emacsclient -t
+	editor = vim
 	autocrlf = input
 [filter "lfs"]
 	clean = git-lfs clean -- %f

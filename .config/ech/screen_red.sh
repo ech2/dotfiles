@@ -3,7 +3,8 @@
 screen_red() {
   local state="$HOME/.screen_red"
   if [ -f $state ]; then
-    redshift -x && rm $state;
+    redshift -x && rm $state
+    source ~/.config/ech/t550_gamma.sh
   else
     redshift -O $1 && touch $state
   fi
