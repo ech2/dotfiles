@@ -106,9 +106,10 @@ alias c.bashrc='$EDITOR ~/.bashrc'
 alias c.compton='$EDITOR ~/.config/compton.conf'
 alias c.i3='$EDITOR ~/.config/i3/config'
 alias c.xres='$EDITOR ~/.Xresources'
-alias c.info='$EDITOR ~/workspace/notes/info.org'
-alias c.todo='$EDITOR ~/workspace/notes/todo.org'
-alias c.stuff='$EDITOR ~/workspace/notes/stuff.org'
+alias c.info='$EDITOR ~/workspace/notes/info.md'
+alias c.diary='$EDITOR ~/workspace/notes/diary.md'
+alias c.todo='$EDITOR ~/workspace/notes/todo.md'
+alias c.stuff='$EDITOR ~/workspace/notes/stuff.md'
 # }
 # Environment {
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
