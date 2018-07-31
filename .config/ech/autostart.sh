@@ -7,7 +7,6 @@ dunst &
 compton &
 nm-applet &
 pa-applet --disable-notifications &
-xfce4-power-manager &
 
 dropbox &
 /opt/Enpass/bin/runenpass.sh startWithTray &
@@ -20,7 +19,9 @@ case `hostname` in
               -option caps:escape\
               -option altwin:swap_lalt_lwin\
               -option lv3:ralt_switch\
-	      -option misc:typo
+	          -option misc:typo
+
+    xfce4-power-manager & 
   ;;
   "darwin")
     setxkbmap -layout rukbi_en,rukbi_ru\
