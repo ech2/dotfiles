@@ -1,6 +1,5 @@
 #!/bin/sh
 
-wal -i ~/workspace/res/wallpapers
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 dunst &
@@ -19,16 +18,20 @@ case `hostname` in
               -option caps:escape\
               -option altwin:swap_lalt_lwin\
               -option lv3:ralt_switch\
-	          -option misc:typo
+              -option misc:typo
 
     xfce4-power-manager & 
+    wal -i ~/workspace/res/wallpapers &
   ;;
   "darwin")
-    setxkbmap -layout rukbi_en,rukbi_ru\
-              -option grp:win_space_toggle\
+    setxkbmap -layout us,ru\
+              -option grp:alt_shift_toggle\
               -option caps:escape\
-              -option apple:alupckeys
+              -option apple:alupckeys\
+              -option lv3:rwin_switch\
+              -option misc:typo
     xrandr --output DP1 --auto --primary\
-           --output DP2 --auto --right-of DP1
+           --output DP2 --auto --right-of DP1 && \
+    wal -i ~/workspace/res/wallpapers &
   ;;
 esac
