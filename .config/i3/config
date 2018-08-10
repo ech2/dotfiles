@@ -109,6 +109,7 @@
   # Apps {{
     #bindsym $mod+Escape exec --no-startup-id dmenu_recency
     bindsym $mod+Escape exec rofi -show run
+    bindsym $mod+Mod1+Escape exec rofi -show drun
 
     bindsym $mod+Return exec st
     bindsym $mod+Ctrl+m exec pavucontrol
@@ -126,7 +127,7 @@
     bindsym $mod+Print --release exec --no-startup-id scrot -s
     bindsym $mod+Shift+Print --release exec scrot -s
 
-    bindsym $mod+F1 exec bash -c 'chromium "$(xclip -o)"'
+    bindsym $mod+F1 exec bash -c '~/.config/ech/browser_open.sh "$(xclip -o)"'
 
     bindsym $mod+F3 exec notify-send "`xclip -o | trans -b :en`"
     bindsym $mod+F4 exec notify-send "`xclip -o | trans -b :ru`"

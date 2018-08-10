@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=2018a
+Type=Application
+Terminal=false
+MimeType=text/x-matlab
+Exec=env LD_PRELOAD="/usr/lib/libfreetype.so.6:/usr/lib/libstdc++.so" matlab -desktop -nosplash
+Name=MATLAB
+Icon=matlab
+Categories=Development;Math;Science
+Comment=Scientific computing environment
+StartupNotify=true
+StartupWMClass="sun-awt-X11-XFramePeer","MATLAB R2018a - academic use"
