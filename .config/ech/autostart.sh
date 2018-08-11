@@ -8,7 +8,6 @@ nm-applet &
 pa-applet --disable-notifications &
 
 dropbox &
-/opt/Enpass/bin/runenpass.sh startWithTray &
 
 case `hostname` in
   "blank")
@@ -35,3 +34,4 @@ case `hostname` in
     wal -i ~/workspace/res/wallpapers &
   ;;
 esac
+

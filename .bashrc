@@ -42,7 +42,7 @@ goto() {
   esac
 }
 genpass() {
-  openssl rand -base64 72 | tr -cd "[[:alnum:]]._-" | cut -c1-"$1"
+  pwgen -ny 12 1 | xclip
 }
 ulf() {
   if [ $# -eq 0 ]; then
@@ -105,6 +105,7 @@ alias jyp=jupyter-notebook
 alias c.bashrc='$EDITOR ~/.bashrc'
 alias c.compton='$EDITOR ~/.config/compton.conf'
 alias c.i3='$EDITOR ~/.config/i3/config'
+alias c.a='$EDITOR ~/.config/ech/autostart.sh'
 alias c.xres='$EDITOR ~/.Xresources'
 alias c.info='$EDITOR ~/workspace/notes/info.md'
 alias c.diary='$EDITOR ~/workspace/notes/diary.md'
