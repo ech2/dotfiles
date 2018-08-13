@@ -5,7 +5,7 @@ _edirs=(
   "/usr/share/applications"
 )
 
-_recent_log="$HOME/.config/ech/.dmenu_recent.log"
+_recent_log="$HOME/.cache/dmenu_freq.log"
 
 if [ ! -f $_recent_log ]; then
   echo lol
@@ -46,6 +46,6 @@ open_and_log() {
 if [[ $1 == "-d" ]]; then
   echo debug
 else
-  s=$({ echo_recent & dmenu_path & find_desktop_entries; } | dmenu "$@")
+  s=$({ echo_recent && dmenu_path && find_desktop_entries; } | dmenu "$@")
   open_and_log $s
 fi
