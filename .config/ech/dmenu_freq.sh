@@ -45,7 +45,6 @@ open_and_log() {
 
 if [[ $1 == "-d" ]]; then
   echo debug
-  echo_recent #&& dmenu_path && find_desktop_entries; } | dmenu "$@")
 else
   s=$({ echo_recent && dmenu_path && find_desktop_entries; } | dmenu "$@")
   open_and_log $s
