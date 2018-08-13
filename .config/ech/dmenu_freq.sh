@@ -13,7 +13,7 @@ if [ ! -f $_recent_log ]; then
 fi
 
 echo_recent() {
-  uniq -c $_recent_log  | sort -r | awk '{print $2}' 
+  sort $_recent_log | uniq -c | sort | awk '{print $2}' 
 }
 
 find_desktop_entries() {
@@ -45,6 +45,7 @@ open_and_log() {
 
 if [[ $1 == "-d" ]]; then
   echo debug
+  echo_recent #&& dmenu_path && find_desktop_entries; } | dmenu "$@")
 else
   s=$({ echo_recent && dmenu_path && find_desktop_entries; } | dmenu "$@")
   open_and_log $s
