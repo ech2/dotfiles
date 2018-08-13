@@ -108,12 +108,12 @@
   # }}
   # Apps {{
     #bindsym $mod+Escape exec --no-startup-id dmenu_recency
-    bindsym $mod+Escape exec rofi -show run
-    bindsym $mod+Mod1+Escape exec rofi -show drun
+    bindsym $mod+Escape exec ~/.config/ech/dmenu_freq.sh
+    bindsym $mod+Mod1+Escape exec passmenu
 
     bindsym $mod+Return exec st
     bindsym $mod+Ctrl+m exec pavucontrol
-    bindsym $mod+r exec st -c st -n floating -g 100x24 -e 'ranger' 
+    bindsym $mod+r exec st -c st -n floating -g 100x24 -e "ranger"
 
     bindsym $mod+c exec st -c st -n floating -g 100x40 vim -- "$@"
     bindsym $mod+d exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/diary.md
