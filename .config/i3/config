@@ -123,9 +123,8 @@
 
     bindsym $mod+Mod1+F12 exec i3lock -c222222
 
-    bindsym Print exec --no-startup-id scrot -d
-    bindsym $mod+Print --release exec --no-startup-id scrot -s
-    bindsym $mod+Shift+Print --release exec scrot -s
+    bindsym Print --release       exec --no-startup-id scrot -s -e 'mv "$f" ~/pictures/'
+    bindsym Ctrl+Print --release exec --no-startup-id scrot -e 'mv "$f" ~/pictures/'
 
     bindsym $mod+F1 exec bash -c '~/.config/ech/browser_open.sh "$(xclip -o)"'
 
