@@ -7,7 +7,7 @@ compton &
 nm-applet &
 pa-applet --disable-notifications &
 
-yandex-disk-indicator &
+dropbox &
 
 case `hostname` in
   "blank")

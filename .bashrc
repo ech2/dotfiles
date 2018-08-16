@@ -111,6 +111,8 @@ alias c.info='$EDITOR ~/workspace/notes/info.md'
 alias c.diary='$EDITOR ~/workspace/notes/diary.md'
 alias c.todo='$EDITOR ~/workspace/notes/todo.md'
 alias c.stuff='$EDITOR ~/workspace/notes/stuff.md'
+
+alias git.sync='git commit -m "sync" && git push'
 # }
 # Environment {
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
