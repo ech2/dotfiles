@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'lervag/vimtex'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'luisjure/csound-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -66,4 +67,7 @@ augroup Binary
   au BufWritePost *.bin set nomod | endif
 augroup END
 " }
+" Csound {
+let g:csound_manual="/usr/share/doc/csound-doc/html/"
+"}
 " }
