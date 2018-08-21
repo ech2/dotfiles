@@ -20,6 +20,7 @@ case `hostname` in
               -option misc:typo
 
     xfce4-power-manager & 
+    xgamma -rgamma 1 -ggamma 0.94 -bgamma 0.9 &
     wal -i ~/workspace/res/wallpapers &
   ;;
   "darwin")

@@ -32,17 +32,17 @@ goto() {
   case $1 in
     'h')   cd ~ ;;
     'w')   cd ~/workspace ;;
-    'd')   cd ~/workspace/dev ;;
     'n')   cd ~/workspace/notes ;;
-    'phd') cd ~/workspace/phd/in-work ;;
-    'p')   cd ~/workspace/projects/in-work ;;
-    't')   cd ~/workspace/trunk ;;
+    'p')   cd ~/workspace/projects ;;
+    'phd') cd ~/workspace/projects/phd ;;
+    'pl')  cd ~/workspace/playground ;;
     's')   cd ~/workspace/sites ;;
+    't')   cd ~/workspace/trunk ;;
     *) echo 'Destination unknown :(' ;;
   esac
 }
 genpass() {
-  pwgen -ny 12 1 | xclip
+  pwgen -ny 12 1 | xclip -sel c
 }
 ulf() {
   if [ $# -eq 0 ]; then

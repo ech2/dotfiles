@@ -113,7 +113,7 @@
 
     bindsym $mod+Return exec st
     bindsym $mod+Ctrl+m exec pavucontrol
-    bindsym $mod+r exec st -c st -n floating -g 100x24 -e "ranger"
+    bindsym $mod+r exec st -c st -n floating -g 100x24 -e "vifm"
 
     bindsym $mod+c exec st -c st -n floating -g 100x40 vim -- "$@"
     bindsym $mod+d exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/diary.md
