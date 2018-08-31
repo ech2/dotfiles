@@ -8,35 +8,29 @@ _edirs=(
 _recent_log="$HOME/.cache/dmenu_freq.log"
 
 if [ ! -f $_recent_log ]; then
-  echo lol
   touch $_recent_log
 fi
 
 echo_recent() {
-  sort $_recent_log | uniq -c | sort | awk '{print $2}' 
+  sort $_recent_log | uniq -c | sort -r | awk '{print $2}' 
 }
 
 find_desktop_entries() {
-  find ${_edirs[*]} \
-       -type f -name "*.desktop" \
+  find "${_edirs[0]}" "${_edirs[1]}" -name "*.desktop" \
   | sed 's!.*/!!'
 }
 
 open_and_log() {
   local sel="$@"
+  local sel_which=$(which $sel)
 
-  case $sel in
-    "")
-      ;; # do nothing  
-    *.desktop)
-      echo $sel >> $_recent_log
-      dex $(find ${_edirs[*]} -type f -name $sel -print -quit) &
-      ;;
-    *)
-      echo $sel >> $_recent_log
-      $($sel) &
-      ;;
-  esac
+  if [[ $sel == "" ]]; then
+    return
+  elif [[ -x $sel_which ]]; then
+    $($sel) &
+  else
+    dex $(find ${_edirs[*]} -type f -name $sel -print -quit) &
+  fi
 
   mv $_recent_log $_recent_log"-tmp"
   tail -n200 $_recent_log"-tmp" > $_recent_log
@@ -45,7 +39,12 @@ open_and_log() {
 
 if [[ $1 == "-d" ]]; then
   echo debug
+  #open_and_log org.telegram.desktop
+  find_desktop_entries
+elif [[ $1 == "-c" ]]; then
+  rm $_recent_log
 else
   s=$({ echo_recent && dmenu_path && find_desktop_entries; } | dmenu "$@")
   open_and_log $s
 fi
+

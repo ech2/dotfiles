@@ -126,4 +126,5 @@ EDITOR="vim"
 VISUAL="gvim"
 
 export PATH=$HOME/workspace/bin:$PATH
+export XDG_DATA_DIRS=~/.local/share/flatpak/exports/share/applications:$XDG_DATA_DIRS
 # }
