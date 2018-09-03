@@ -25,12 +25,15 @@ open_and_log() {
   local sel_which=$(which $sel)
 
   if [[ $sel == "" ]]; then
+    echo lol
     return
   elif [[ -x $sel_which ]]; then
     $($sel) &
   else
     dex $(find ${_edirs[*]} -type f -name $sel -print -quit) &
   fi
+
+  echo "$sel" >> $_recent_log
 
   mv $_recent_log $_recent_log"-tmp"
   tail -n200 $_recent_log"-tmp" > $_recent_log
@@ -39,12 +42,10 @@ open_and_log() {
 
 if [[ $1 == "-d" ]]; then
   echo debug
-  #open_and_log org.telegram.desktop
-  find_desktop_entries
 elif [[ $1 == "-c" ]]; then
   rm $_recent_log
 else
-  s=$({ echo_recent && dmenu_path && find_desktop_entries; } | dmenu "$@")
+  s=$({ echo_recent && find_desktop_entries && dmenu_path; } | dmenu "$@")
   open_and_log $s
 fi
 
