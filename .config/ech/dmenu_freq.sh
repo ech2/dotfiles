@@ -25,7 +25,6 @@ open_and_log() {
   local sel_which=$(which $sel)
 
   if [[ $sel == "" ]]; then
-    echo lol
     return
   elif [[ -x $sel_which ]]; then
     $($sel) &

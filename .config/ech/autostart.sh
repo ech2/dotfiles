@@ -11,7 +11,6 @@ dropbox &
 
 case `hostname` in
   "blank")
-    source ~/.config/ech/t500_gamma.sh
     setxkbmap -layout us,ru\
               -option grp:alt_shift_toggle\
               -option caps:escape\
