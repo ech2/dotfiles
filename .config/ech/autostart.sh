@@ -10,7 +10,7 @@ pa-applet --disable-notifications &
 #dropbox &
 yandex-disk-indicator &
 
-wallpaper=~/workspace/res/wallpapers_2/texture_wood_paint_surface_119067_3840x2400.jpg
+wallpaper=~/workspace/res/wallpapers_2/
 
 case `hostname` in
   "blank")
