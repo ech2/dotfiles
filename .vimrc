@@ -9,6 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'lervag/vimtex'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'luisjure/csound-vim'
+Plugin 'vim-orgmode'
+Plugin 'tpope/vim-speeddating'
 
 call vundle#end()
 filetype plugin indent on
@@ -22,6 +24,7 @@ set number
 syntax enable
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set nowrap
+let maplocalleader=","
 " }
 " UI {
 if has('gui_running')

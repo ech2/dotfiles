@@ -44,7 +44,7 @@ if [[ $1 == "-d" ]]; then
 elif [[ $1 == "-c" ]]; then
   rm $_recent_log
 else
-  s=$({ echo_recent && find_desktop_entries && dmenu_path; } | dmenu "$@")
+  s=$({ echo_recent && dmenu_path && find_desktop_entries; } | dmenu -i "$@")
   open_and_log $s
 fi
 

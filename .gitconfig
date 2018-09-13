@@ -6,6 +6,7 @@
   af = add -f
   b = branch
   c = commit
+  cs = commit -m 'sync'
   co = checkout
   d = diff
   s = status

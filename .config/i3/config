@@ -116,10 +116,10 @@
     bindsym $mod+r exec st -c st -n floating -g 100x24 -e "vifm"
 
     bindsym $mod+c exec st -c st -n floating -g 100x40 vim -- "$@"
-    bindsym $mod+d exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/diary.md
-    bindsym $mod+i exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/info.md
-    bindsym $mod+n exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/notes.md
-    bindsym $mod+t exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/todo.md
+    bindsym $mod+d exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/diary.org
+    bindsym $mod+i exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/info.org
+    bindsym $mod+n exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/notes.org
+    bindsym $mod+t exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/todo.org
 
     bindsym $mod+Mod1+F12 exec i3lock -c222222
 
