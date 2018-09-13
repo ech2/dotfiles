@@ -29,7 +29,15 @@ open_and_log() {
   elif [[ -x $sel_which ]]; then
     $($sel) &
   else
-    dex $(find ${_edirs[*]} -type f -name $sel -print -quit) &
+    for d in ${_edirs[*]}; do
+      local de="${d}/${sel}"
+      echo $de
+      if [[ -f $de ]]; then
+        dex $de &
+        break
+      fi 
+    done
+#    dex $(find ${_edirs[*]} -type f -name $sel -print -quit) &
   fi
 
   echo "$sel" >> $_recent_log
