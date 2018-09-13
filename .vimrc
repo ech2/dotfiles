@@ -11,6 +11,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'luisjure/csound-vim'
 Plugin 'vim-orgmode'
 Plugin 'tpope/vim-speeddating'
+Plugin 'dylanaraps/wal.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -27,6 +28,7 @@ set nowrap
 let maplocalleader=","
 " }
 " UI {
+colorscheme wal
 if has('gui_running')
   set guifont=FiraMono\ 12
   set antialias
