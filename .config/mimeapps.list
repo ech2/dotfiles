@@ -59,3 +59,6 @@ video/x-matroska=mpv.desktop;
 video/webm=mpv.desktop;
 video/mp2t=mpv.desktop;
 text/plain=org.gnome.gedit.desktop;
+x-scheme-handler/http=exo-web-browser.desktop
+x-scheme-handler/https=exo-web-browser.desktop
+
