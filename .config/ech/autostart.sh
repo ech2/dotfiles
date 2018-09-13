@@ -7,7 +7,10 @@ compton &
 nm-applet &
 pa-applet --disable-notifications &
 
-dropbox &
+#dropbox &
+yandex-disk-indicator &
+
+wallpaper=~/workspace/res/wallpapers_2/texture_wood_paint_surface_119067_3840x2400.jpg
 
 case `hostname` in
   "blank")
@@ -20,7 +23,7 @@ case `hostname` in
 
     ~/.config/ech/t550_gamma.sh &
     xfce4-power-manager & 
-    wal -i ~/workspace/res/wallpapers &
+    wal -st -i $wallpaper &
   ;;
   "darwin")
     setxkbmap -layout us,ru\
@@ -31,7 +34,7 @@ case `hostname` in
               -option misc:typo
     xrandr --output DP1 --auto --primary\
            --output DP2 --auto --right-of DP1 && \
-    wal -i ~/workspace/res/wallpapers &
+    wal -st -i $wallpaper &
   ;;
 esac
 
