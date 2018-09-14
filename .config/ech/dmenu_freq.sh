@@ -37,7 +37,6 @@ open_and_log() {
         break
       fi 
     done
-#    dex $(find ${_edirs[*]} -type f -name $sel -print -quit) &
   fi
 
   echo "$sel" >> $_recent_log
