@@ -132,7 +132,7 @@
     bindsym $mod+F4 exec notify-send "`xclip -o | trans -b :ru`"
 
     bindsym $mod+F8 exec wal -i ~/workspace/res/wallpapers_2
-    bindsym $mod+Shift+F8 exec wal -l -i ~/workspace/res/wallpapers_2
+    bindsym $mod+Shift+F8 exec wal -i ~/workspace/res/wallpapers_2 --saturate 0.6
 
     bindsym $mod+F9 exec ~/.config/ech/screen_red.sh 3100
     bindsym $mod+Mod1+F9 exec ~/.config/ech/screen_red.sh 1000
