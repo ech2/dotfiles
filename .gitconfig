@@ -9,6 +9,7 @@
   cs = commit -a -m 'sync'
   co = checkout
   d = diff
+  p = push
   s = status
   last = log -1 HEAD
   l = log --pretty=format:'%Cblue%h %Cgreen%cd%Creset %s %Cgreen%cn' --date=short
