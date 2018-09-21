@@ -114,13 +114,15 @@
     bindsym $mod+Return exec st
     bindsym $mod+Ctrl+m exec pavucontrol
     bindsym $mod+r exec pcmanfm
-    bindsym $mod+Shift+r exec st -c st -n floating -g 100x24 -e "vifm"
+    bindsym $mod+Shift+r exec st -c st -n floating -g 140x34 -e "vifm"
 
     bindsym $mod+c exec st -c st -n floating -g 100x40 vim -- "$@"
-    bindsym $mod+d exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/diary.org
     bindsym $mod+i exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/info.org
-    bindsym $mod+n exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/notes.org
-    bindsym $mod+t exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/todo.org
+
+    bindsym $mod+Shift+c exec st -c st -n floating -g 100x40 emacsclient -t -a -- "$@"
+    bindsym $mod+d exec st -c st -n floating -g 100x40 emacsclient -t -a -- ~/workspace/notes/diary.org
+    bindsym $mod+n exec st -c st -n floating -g 100x40 emacsclient -t -a -- ~/workspace/notes/notes.org
+    bindsym $mod+t exec st -c st -n floating -g 100x40 emacsclient -t -a -- ~/workspace/notes/todo.org
 
     bindsym $mod+Mod1+F12 exec i3lock -c222222
 
@@ -273,8 +275,8 @@
   }
 # }}
 # i3gaps {{
-  gaps inner 35
-  gaps outer -4
+  gaps inner 25
+  gaps outer -5
   
   smart_borders on
   
