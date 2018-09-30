@@ -1,5 +1,5 @@
 [Default Applications]
-application/pdf=evince.desktop
+application/pdf=org.gnome.Evince.desktop
 inode/directory=org.gnome.Nautilus.desktop;
 text/html=chromium.desktop
 x-scheme-handler/http=chromium.desktop
@@ -62,3 +62,4 @@ text/plain=org.gnome.gedit.desktop;
 x-scheme-handler/http=exo-web-browser.desktop
 x-scheme-handler/https=exo-web-browser.desktop
 image/jpeg=evince.desktop;
+application/pdf=org.gnome.Evince.desktop;
