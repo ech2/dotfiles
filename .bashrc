@@ -32,6 +32,7 @@ goto() {
   case $1 in
     'h')   cd ~ ;;
     'w')   cd ~/workspace ;;
+    'd')   cd ~/workspace/dev ;;
     'n')   cd ~/workspace/notes ;;
     'p')   cd ~/workspace/projects ;;
     'phd') cd ~/workspace/projects/phd ;;

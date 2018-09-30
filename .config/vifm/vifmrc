@@ -398,6 +398,10 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Start shell in current directory
 nnoremap s :shell<cr>
+nnoremap gh :cd ~
+nnoremap gw :cd ~/workspace
+nnoremap gd :cn ~/workspace/notes
+nnoremap gd :cd ~/workspace/notes/docs
 
 " Display sorting dialog
 nnoremap S :sort<cr>
@@ -443,6 +447,14 @@ nnoremap <f5> :copy<cr>
 nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
+
+" ------------------------------------------------------------------------------
+" My configs
+
+nnoremap gh :cd ~<cr>
+nnoremap gw :cd ~/workspace<cr>
+nnoremap gn :cd ~/workspace/notes<cr>
+nnoremap gd :cd ~/workspace/notes/docs<cr>
 
 " ------------------------------------------------------------------------------
 
