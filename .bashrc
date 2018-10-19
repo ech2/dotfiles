@@ -97,6 +97,7 @@ alias ecl='emacsclient -a "" -t'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
+alias less='less -R'
 alias ls='ls --color=auto -h'
 alias lsr='ls -ltr'
 
