@@ -120,9 +120,9 @@
     bindsym $mod+i exec st -c st -n floating -g 100x40 vim -- ~/workspace/notes/info.org
 
     bindsym $mod+Shift+c exec emacsclient -c -a"" -- "$@"
-    bindsym $mod+d exec emacsclient -t -a"" -- ~/workspace/notes/diary.org
-    bindsym $mod+n exec emacsclient -t -a"" -- ~/workspace/notes/notes.org
-    bindsym $mod+t exec emacsclient -t -a"" -- ~/workspace/notes/todo.org
+    bindsym $mod+d exec emacsclient -c -a"" -- ~/workspace/notes/diary.org
+    bindsym $mod+n exec emacsclient -c -a"" -- ~/workspace/notes/notes.org
+    bindsym $mod+t exec emacsclient -c -a"" -- ~/workspace/notes/todo.org
 
     bindsym $mod+Mod1+F12 exec i3lock -c222222
 
