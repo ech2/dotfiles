@@ -31,6 +31,7 @@ video/x-theora=mpv.desktop
 video/x-matroska=mpv.desktop
 video/webm=mpv.desktop
 video/mp2t=mpv.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
 
 [Added Associations]
 inode/directory=org.gnome.Nautilus.desktop;
